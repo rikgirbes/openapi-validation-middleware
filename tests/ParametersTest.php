@@ -11,9 +11,9 @@
 
 namespace HKarlstrom\Middleware\OpenApiValidation;
 
-use Opis\JsonSchema\Format;
+use Opis\JsonSchema\IFormat;
 
-class CustomFormat implements Format
+class CustomFormat implements IFormat
 {
     public function validate($data) : bool
     {

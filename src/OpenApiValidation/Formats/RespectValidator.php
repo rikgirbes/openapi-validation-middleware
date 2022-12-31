@@ -12,10 +12,10 @@
 namespace HKarlstrom\Middleware\OpenApiValidation\Formats;
 
 use Exception;
-use Opis\JsonSchema\Format;
+use Opis\JsonSchema\IFormat;
 use Respect\Validation\Validator as v;
 
-class RespectValidator implements Format
+class RespectValidator implements IFormat
 {
     private $validator;
     private $args;

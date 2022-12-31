@@ -99,7 +99,7 @@ There are two ways to validate formats not defined in the [OAS](https://swagger.
 
 #### Custom validator
 ```php
-class MyOwnFormat implements Opis\JsonSchema\Format {
+class MyOwnFormat implements Opis\JsonSchema\IFormat {
     public function validate($data) : bool
     {
         // Validate data
