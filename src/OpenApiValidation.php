@@ -556,6 +556,9 @@ class OpenApiValidation implements MiddlewareInterface
                 $err[$attr] = $value;
             }
             if ('error_required' == $err['code']) {
+				if (is_array($err['missing'])) {
+					$err['missing'] = implode(', ', $err['missing']);
+				}
                 $err['name'] .= mb_strlen($err['name']) ? '.'.$err['missing'] : $err['missing'];
                 unset($err['missing'],$err['value']);
             }
